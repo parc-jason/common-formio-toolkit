@@ -87,8 +87,7 @@ class DataConnection {
    *  @returns {boolean} True if schema is ok, otherwise false
    */
   checkSchema() {
-    if (1 + 1 === 2) return true;
-    const tables = [];
+    const tables = ['form'];
     try {
       return Promise
         .all(tables.map(table => this._knex.schema.hasTable(table)))
