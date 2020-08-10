@@ -107,6 +107,9 @@ export default {
       }
     },
     onChangeMethod(schema) {
+      if (!this.formSchema) {
+        this.formSchema = {};
+      }
       this.formSchema = Object.assign(this.formSchema, schema);
     }
   }
